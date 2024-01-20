@@ -1,14 +1,18 @@
 package com.example.bd;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
-
+import java.sql.*;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class StudentsController implements Initializable {
     //объявляем все элементы с интерфейса Students.fxml и связываем их с классом Student
@@ -50,7 +54,7 @@ public class StudentsController implements Initializable {
             Class.forName("org.h2.Driver"); //подгружаем драйвер для H2
             try { //еще один блок try ... catch
 // получаем доступ к БД jdbc:h2:file:university1 – находится в текущем каталоге проекта
-                conn=DriverManager.getConnection("jdbc:h2:file:university1","sa","");
+                conn=DriverManager.getConnection("jdbc:h2:C:/Users/РБТ/Downloads/bd/myBD","sa","");
 //получаем объект для выполнения команд SQL
                 stmt=conn.createStatement();
 // еще один объект для выполнения команд SQL
@@ -81,7 +85,7 @@ public class StudentsController implements Initializable {
             }
         }
 //создаем список типа ObservableList, в который записываем все содержимое массива students
-        ObservableList<Student> data=FXCollections.observableArrayList(students);
+        ObservableList<Student> data= FXCollections.observableArrayList(students);
         studentsTable.setItems(data);//загружаем все из data в таблицу на окне
     }
 }
