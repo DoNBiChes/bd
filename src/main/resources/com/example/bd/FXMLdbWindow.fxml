@@ -3,7 +3,6 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
 <BorderPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bd.FXMLdbWindowController">
    <top>
       <MenuBar BorderPane.alignment="CENTER">
@@ -16,6 +15,11 @@
           <Menu mnemonicParsing="false" text="Таблицы">
             <items>
               <MenuItem mnemonicParsing="false" onAction="#handleShowStudents" text="Студенты" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleShowLecturers" text="Преподаватели" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleShowSubjects" text="Предметы" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleShowUniversities" text="Университеты" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleShowExam_marks" text="Экзаменационные оценки" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleShowSubj_lects" text="Преподаватели и их предметы" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Help">

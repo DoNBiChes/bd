@@ -27,7 +27,7 @@ public class Main extends Application {
             // Настройка основной сцены
             Scene scene = new Scene(root);
             primaryStage.setScene(scene);
-            primaryStage.setTitle("Ваше приложение");
+            primaryStage.setTitle("lab_4");
             primaryStage.show();
         } catch (IOException e) {
             e.printStackTrace();
